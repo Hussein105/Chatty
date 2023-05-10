@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Chatty" parent="Theme.Material3.DayNight">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:colorButtonNormal">@drawable/button_selector</item>
+        <item name="colorButtonNormal">@drawable/button_selector</item>
+        <item name="android:buttonStyle">@style/FriendlyButtonStyle</item>
+    </style>
+
+    <style name="Theme.Chatty" parent="Base.Theme.Chatty" />
+
+    <style name="FriendlyButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/colorTitle</item>
+    </style>
+
+</resources>
