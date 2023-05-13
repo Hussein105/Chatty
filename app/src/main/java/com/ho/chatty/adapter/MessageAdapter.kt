@@ -84,11 +84,11 @@ class MessageAdapter(
         ViewHolder(binding.root) {
         fun bind(item: Message) {
             binding.apply {
-                loadImageIntoView(messageImageView, item.photoUrl!!)
+                item.imageUrl?.let { loadImageIntoView(messageImageView, it) }
 
                 messengerTextView.text = item.name ?: ANONYMOUS
 
-                loadImageIntoView(messengerImageView, item.photoUrl)
+                item.photoUrl?.let { loadImageIntoView(messengerImageView, it) }
             }
         }
     }

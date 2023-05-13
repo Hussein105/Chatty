@@ -11,36 +11,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/colorLightGray"
+        android:background="@color/white"
         android:orientation="horizontal"
         android:paddingHorizontal="10dp">
 
         <ImageView
             android:id="@+id/addMessageImageView"
-            android:layout_width="wrap_content"
+            android:layout_width="32dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            ads:srcCompat="@drawable/outline_add_photo_alternate_24" />
+            ads:srcCompat="@drawable/ic_img_picker"
+            ads:tint="@color/colorBlue" />
 
-        <EditText
-            android:id="@+id/messageEditText"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="10dp"
-            android:layout_gravity="center"
-            android:padding="10dp"
-            android:background="@drawable/edit_text_shadow"
-            android:hint="Say something..."
-            android:inputType="text" />
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/messageEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:hint="@string/say_something"
+                android:inputType="text"
+                android:padding="10dp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <ImageView
             android:id="@+id/sendButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="32dp"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:enabled="false"
-            android:src="@drawable/outline_send_gray_24" />
+            android:src="@drawable/ic_send"
+            ads:tint="@color/colorBlue" />
 
     </LinearLayout>
 

@@ -11,4 +11,5 @@
     <string name="sign_up">Sign Up</string>
     <string name="fresh_config">Fresh Config</string>
     <string name="cause_crash">Cause Crash</string>
+    <string name="say_something">Say something...</string>
 </resources>

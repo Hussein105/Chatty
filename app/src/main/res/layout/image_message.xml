@@ -6,25 +6,18 @@
     android:layout_height="wrap_content"
     android:layout_margin="10dp">
 
-    <com.facebook.shimmer.ShimmerFrameLayout
-        android:id="@+id/shimmerContainer"
+    <ImageView
+        android:id="@+id/messageImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:foregroundGravity="center"
+        android:layout_marginStart="10dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="300dp"
+        android:maxHeight="200dp"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
         app:layout_constraintStart_toEndOf="@id/messengerImageView"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/messageImageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:adjustViewBounds="true"
-            android:maxWidth="300dp"
-            android:maxHeight="200dp"
-            android:padding="10dp"
-            android:scaleType="fitCenter" />
-    </com.facebook.shimmer.ShimmerFrameLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/messengerTextView"
@@ -32,8 +25,8 @@
         android:layout_height="wrap_content"
         android:paddingHorizontal="10dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        app:layout_constraintStart_toStartOf="@id/shimmerContainer"
-        app:layout_constraintTop_toBottomOf="@id/shimmerContainer"
+        app:layout_constraintStart_toStartOf="@id/messageImageView"
+        app:layout_constraintTop_toBottomOf="@id/messageImageView"
         tools:text="FirstName LastName" />
 
     <ImageView
@@ -43,7 +36,7 @@
         android:layout_marginBottom="15dp"
         android:src="@drawable/baseline_account_circle_24"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/shimmerContainer"
+        app:layout_constraintEnd_toStartOf="@id/messageImageView"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
